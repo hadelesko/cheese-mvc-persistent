@@ -9,7 +9,10 @@ import javax.transaction.Transactional;
 /**
  * Created by LaunchCode
  */
-@Repository
-@Transactional
+@Repository //
+@Transactional  // to difine the start and the end of every transactions
 public interface CheeseDao extends CrudRepository<Cheese, Integer> {
+    //CrudRepository is
+    //@Query(my sql query) here i can write my transaction to assessthe deta i want
+
 }

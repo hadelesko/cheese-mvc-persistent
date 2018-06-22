@@ -1,5 +1,6 @@
 package org.launchcode.models;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,11 +10,11 @@ import javax.validation.constraints.Size;
 /**
  * Created by LaunchCode
  */
-@Entity
+@Entity  // for the database declaration
 public class Cheese {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue //key value are auto generatad
     private int id;
 
     @NotNull
