@@ -8,7 +8,7 @@
 
         <nav th:replace="fragments :: navigation"></nav>
 
-        <p th:unless="${menus} and ${cheeses.size()}">no menu :(</p>
+        <p th:unless="${menus} and ${menus.size()}">no menu :(</p>
 
 
         <table class="table">
@@ -17,8 +17,9 @@
                 <th>Menu</th>
             </tr>
             <tr th:each="menu : ${menus}">
-                <a th:href="'menu/view/'+${menu.id}" th:text="${menu.name}"></a>
+                <li><a th:href="'menu/view/'+${menu.id}" th:text="${menu.name}"></a></li>
             </tr>
         </table>
         <a href="menu/add">Add Menu</a>
+    </body>
 </html>
